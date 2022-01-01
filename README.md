@@ -10,8 +10,16 @@
 make apply
 ```
 
+## Deployment・Service作成
+
+```bash
+aws eks --region <region> update-kubeconfig --name <cluster_name>
+kubectl apply -f ./manifest.yml
+```
+
 ## リソース削除
 
 ```bash
+kubectl delete -f ./manifest.yml
 make destroy
 ```
